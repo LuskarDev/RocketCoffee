@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RocketCoffee</title>
+</head>
+<body>
+
+    <div class="lights">
+        <img src="assets/blur-1.png" alt="blur1">
+        <img src="assets/blur-2.png" alt="blur2">
+        <img src="assets/blur-mobile.png" alt="blur mobile">
+    </div>
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                <img src="assets/logo-desktop.svg" alt="logo">
+            </div>
+            <ul>
+                <li>Home</li>
+                <li>Menu</li>
+                <li>Recompensas</li>
+                <li>Gift Cards</li>
+                <li>Lojas</li>
+            </ul>
+            <button>Pegar meu Café</button>
+
+        </nav>
+
+        <nav class="menu-mobile">
+
+            <div class="logo">
+                <img src="assets/logo-mobile.svg" alt="logo">
+            </div>
+
+
+            <ul class="list-mobile">
+                <li>Home</li>
+                <li>Menu</li>
+                <li>Recompensas</li>
+                <li>Gift Cards</li>
+                <li>Lojas</li>
+            </ul>
+            
+            <div class="menu">
+                <img id="menu" src="assets/menu-buguer-open.svg" alt="menu">
+            </div>
+
+            <div class="close">
+                <img id="close" src="assets/menu-buguer-close.svg" alt="close">
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="text-mobile">
+            <h2>
+                O café que fará seu código decolar para o próximo nivel.
+            </h2>
+            
+            <button>Pegar meu Café <img src="assets/arrow.svg" alt="arrow"></button>
+        </div>
+
+        <div class="titles">
+            <h1>Great Coffee</h1>
+            <h2> &lt; Great Coffee /&gt; </h2>
+        </div>
+
+        <div class="img-coffee">
+            <img src="assets/rocket-coffee.png" alt="Rocket Coffee">
+        </div>
+
+
+    </main>
+    
+    <script>
+
+        const Iconmenu = document.getElementById('menu');
+        const close = document.getElementById('close');
+
+        const ListMobile = document.querySelector('.list-mobile');
+
+        Iconmenu.addEventListener('click',() => {
+            ListMobile.classList.toggle('ativo');
+            close.classList.toggle('showClose');
+            Iconmenu.classList.toggle('removeMenu');
+        })
+
+        close.addEventListener('click',() => {
+            ListMobile.classList.toggle('ativo');
+            close.classList.toggle('showClose');
+            Iconmenu.classList.toggle('removeMenu');
+
+        })
+
+
+
+    </script>
+
+</body>
+</html>
