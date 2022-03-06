@@ -17,7 +17,7 @@
 
     <header>
 
-        <nav>
+        <nav class="nav">
 
             <div class="logo">
                 <img src="assets/logo-desktop.svg" alt="logo">
@@ -29,7 +29,7 @@
                 <li>Gift Cards</li>
                 <li>Lojas</li>
             </ul>
-            <button>Pegar meu Café</button>
+            <button class="btn">Pegar meu Café</button>
 
         </nav>
 
@@ -63,16 +63,16 @@
     <main>
 
         <div class="text-mobile">
-            <h2>
+            <h2 class="h2-mobile">
                 O café que fará seu código decolar para o próximo nivel.
             </h2>
             
-            <button>Pegar meu Café <img src="assets/arrow.svg" alt="arrow"></button>
+            <button class="btn">Pegar meu Café <img src="assets/arrow.svg" alt="arrow"></button>
         </div>
 
         <div class="titles">
-            <h1>Great Coffee</h1>
-            <h2> &lt; Great Coffee /&gt; </h2>
+            <h1 class="h1">Great Coffee</h1>
+            <h2  class="h2"> &lt; Great Coffee /&gt; </h2>
         </div>
 
         <div class="img-coffee">
@@ -81,30 +81,78 @@
 
 
     </main>
-    
-    <script>
 
-        const Iconmenu = document.getElementById('menu');
-        const close = document.getElementById('close');
-
-        const ListMobile = document.querySelector('.list-mobile');
-
-        Iconmenu.addEventListener('click',() => {
-            ListMobile.classList.toggle('ativo');
-            close.classList.toggle('showClose');
-            Iconmenu.classList.toggle('removeMenu');
-        })
-
-        close.addEventListener('click',() => {
-            ListMobile.classList.toggle('ativo');
-            close.classList.toggle('showClose');
-            Iconmenu.classList.toggle('removeMenu');
-
-        })
-
-
-
-    </script>
-
+   
 </body>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+    
+<script>
+
+    const Iconmenu = document.getElementById('menu');
+    const close = document.getElementById('close');
+
+    const ListMobile = document.querySelector('.list-mobile');
+
+    Iconmenu.addEventListener('click',() => {
+        ListMobile.classList.toggle('ativo');
+        close.classList.toggle('showClose');
+        Iconmenu.classList.toggle('removeMenu');
+    })
+
+    close.addEventListener('click',() => {
+        ListMobile.classList.toggle('ativo');
+        close.classList.toggle('showClose');
+        Iconmenu.classList.toggle('removeMenu');
+
+    })
+
+    var slideUp = {
+    distance: '150%',
+    origin: 'top',
+    opacity: null,
+    reset: true
+};
+
+var slideBottom = {
+    distance: '150%',
+    origin: 'bottom',
+    opacity: null,
+    reset: true
+};
+
+var slideLeft = {
+    distance: '150%',
+    origin: 'left',
+    opacity: null,
+    reset: true
+};
+
+
+var slideRight = {
+    distance: '150%',
+    origin: 'right',
+    opacity: null,
+    reset: true
+};
+
+
+
+ScrollReveal().reveal('.nav', slideUp);
+ScrollReveal().reveal('.img-coffee', slideBottom);
+ScrollReveal().reveal('.h1', slideLeft);
+ScrollReveal().reveal('.h2', slideRight);
+ScrollReveal().reveal('.h2-mobile', slideUp);
+ScrollReveal().reveal('.menu-mobile', slideUp);
+ScrollReveal().reveal('.btn', slideLeft);
+
+
+
+
+
+
+
+
+</script>
+
 </html>
