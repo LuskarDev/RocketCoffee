@@ -17,6 +17,7 @@
 }
 
 body{
+    height: 100%;
     position: relative;
     background: var(--background);
 }
@@ -154,7 +155,6 @@ header .menu-mobile{
     align-items: center;
     justify-content: space-around;
     border-bottom: 1px solid var( --border-menu-mobile);
-    z-index: 1;
 }
 
 header .menu-mobile .menu img {
@@ -193,6 +193,8 @@ header .menu-mobile ul {
    transition: transform .35s ease;
    opacity: 0;
    visibility: hidden;
+   z-index: 6999;
+
 }
 
 header .menu-mobile ul.ativo {
@@ -200,7 +202,9 @@ header .menu-mobile ul.ativo {
     transition: transform .35s ease;
     opacity: 1;
     visibility: visible;
-   z-index: 99999999999999;
+   background: var(--background);
+   z-index: 1;
+
 }
 
 header .menu-mobile ul li{
@@ -211,7 +215,6 @@ header .menu-mobile ul li{
     text-align: left;
     color: var(--text-color-menu-mobile);
     border: 1px solid var(--border);
-    z-index: 1;
 }
 
 header .menu-mobile ul li:hover{
@@ -255,6 +258,7 @@ header .menu-mobile ul li:hover::after{
         transform: translateX(0%);
         transition: transform .35s ease;
         opacity: 1;
+        z-index: 12;
         visibility: visible;
     }
 
@@ -287,11 +291,12 @@ header .menu-mobile ul li:hover::after{
 
     body .lights img:nth-child(3){
         width: 100%;
+        height: 60%;
         display: inline;
         position: absolute;
         bottom: 0;
         left: 0px;
-        z-index: 1;
+        z-index: 2;
     }
 
     header .menu-mobile .logo {
@@ -311,6 +316,7 @@ header .menu-mobile ul li:hover::after{
     body main .text-mobile button{
         line-height:none;
         margin:0;
+        z-index: 4;
     }
     body main .text-mobile button img {
         margin-left: 10px;
@@ -319,6 +325,7 @@ header .menu-mobile ul li:hover::after{
     header .menu-mobile ul.ativo {
         width: 100%;
         height: 100%;
+        
     }
 
     body main .text-mobile h2{
