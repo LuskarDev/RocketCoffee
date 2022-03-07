@@ -18,31 +18,15 @@
 
 html {
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 body{
-    position: relative;
+    width: 100%;
+    height: 100vh;
     background: var(--background);
 }
 
-body .lights img:nth-child(1){
-    width: 300px;
-    position: absolute;
-    bottom: 2px;
-    left: 0;
-}
-
-body .lights img:nth-child(2){
-    width: 400px;
-    position: absolute;
-    top: -49px;
-    right: 0;
-}
-
-body .lights img:nth-child(3){
-    display: none;
-}
 
 /** button **/
 
@@ -74,7 +58,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 50px;
 }
 
 header .menu-mobile {
@@ -87,6 +70,7 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 1.8rem;
 }
 
 header nav .logo {
@@ -110,19 +94,44 @@ header nav ul li:hover{
 }
 
 body main {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+body main .lights img:nth-child(1){
+    width: 300px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}
+
+body main .lights img:nth-child(2){
+    width: 400px;
+    position: absolute;
+    top: -100px;
+    right: 0;
+}
+
+body main .lights img:nth-child(3){
+    display: none;
 }
 
 body main .text-mobile{
+    margin-top: 7rem;
     display: none;
 }
 
 body main .img-coffee {
     text-align: center;
-    margin-top: .5rem;
+    margin-top: 1.5rem;
+}
+
+body main .img-coffee img {
+    object-fit: contain;
 }
 
 body main .titles {
@@ -165,31 +174,45 @@ header .menu-mobile{
 header .menu-mobile .menu img {
     height: 10px;
     position: absolute;
-    top: 10px;
+    top: 40px;
     right: 30px;
+    z-index: 1;
+    transform: translateX(10%);
+    transition: .35s ease;
 }
 
 header .menu-mobile img.removeMenu{
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10%);
+    transition: .35s ease;
 }
 
 header .menu-mobile .close{
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
 }
 
 header .menu-mobile .close img{
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+
 }
 
 header .menu-mobile .close,
 header .menu-mobile .close img.showClose{
-    display: flex!important;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+    transition: .35s ease;
 }
 
 header .menu-mobile ul {
     position: fixed;
     width: 40%;
-    top: 120px;
+    top: 100px;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -254,6 +277,10 @@ header .menu-mobile ul li:hover::after{
 
 @media (max-width: 814px){
 
+    header .menu-mobile ul {
+       z-index: 6999;
+    }
+
     header .menu-mobile .logo {
         margin-right: 17rem;
     }
@@ -277,31 +304,37 @@ header .menu-mobile ul li:hover::after{
 
 @media (max-width: 686px){
 
-    body main .img-coffee img{
+    body main .img-coffee {
         width: 100%;
         height: 100%;
-
+        margin-top: 5rem;
     }
 }
 
 @media (max-width: 646px){
 
-    body .lights img:nth-child(1){
-        display: none;
-    }
-
-    body .lights img:nth-child(2){
-        display: none;
-    }
-
-    body .lights img:nth-child(3){
+    body main .img-coffee {
         width: 100%;
-        height: 60%;
+        height: 100%;
+        margin-top: 3.4rem;
+    }
+
+    body main .lights img:nth-child(1){
+        display: none;
+    }
+
+    body main .lights img:nth-child(2){
+        display: none;
+    }
+
+    body main .lights img:nth-child(3){
+        width: 100%;
+        height: 70%;
         display: inline;
         position: absolute;
-        bottom: 0;
+        bottom: -139px;
         left: 0px;
-        z-index: 2;
+        z-index: 0;
     }
 
     header .menu-mobile .logo {
@@ -327,6 +360,7 @@ header .menu-mobile ul li:hover::after{
         margin-left: 10px;
     }
 
+
     header .menu-mobile ul.ativo {
         width: 100%;
         height: 100vh;
@@ -347,6 +381,9 @@ header .menu-mobile ul li:hover::after{
         height: 100%;
     }
 
+    body main .img-coffee {
+        margin-top: 8rem;
+    }
 
     header .menu-mobile .logo {
         margin-right: 5rem;
@@ -354,6 +391,7 @@ header .menu-mobile ul li:hover::after{
 
     body main .text-mobile {     
             width: 80%;
+        margin-top: 12rem;
         }
 
     body main .titles h1{
