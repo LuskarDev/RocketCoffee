@@ -16,8 +16,13 @@
     --text-color-menu-mobile: #E1E1E6;
 }
 
+html {
+    height: 100vh;
+    overflow: hidden;
+
+}
+
 body{
-    height: 100%;
     position: relative;
     background: var(--background);
 }
@@ -117,6 +122,7 @@ body main .text-mobile{
 }
 
 body main .img-coffee {
+    margin-top: 6rem;
     text-align: center;
 }
 
@@ -126,7 +132,7 @@ body main .titles {
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
     font-size: 1.8rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
     text-align: center;
 }
 
@@ -324,7 +330,7 @@ header .menu-mobile ul li:hover::after{
 
     header .menu-mobile ul.ativo {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         
     }
 
@@ -338,9 +344,10 @@ header .menu-mobile ul li:hover::after{
 
 @media (max-width: 478px){
 
-    html {
-        overflow: hidden;
+    body {
+        height: 100%;
     }
+
 
     header .menu-mobile .logo {
         margin-right: 5rem;
