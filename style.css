@@ -338,6 +338,10 @@ header .menu-mobile ul li:hover::after{
 
 @media (max-width: 478px){
 
+    html {
+        overflow: hidden;
+    }
+
     header .menu-mobile .logo {
         margin-right: 5rem;
     }
