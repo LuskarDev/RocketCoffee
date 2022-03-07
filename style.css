@@ -17,9 +17,8 @@
 }
 
 html {
+    width: 100%;
     height: 100vh;
-    overflow: hidden;
-
 }
 
 body{
@@ -122,8 +121,8 @@ body main .text-mobile{
 }
 
 body main .img-coffee {
-    margin-top: 6rem;
     text-align: center;
+    margin-top: .5rem;
 }
 
 body main .titles {
@@ -132,7 +131,7 @@ body main .titles {
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
     font-size: 1.8rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
     text-align: center;
 }
 
