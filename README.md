@@ -6,7 +6,7 @@
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-</p>f
+</p>
 <p align="center">
    <img alt="RocketCoffee" title="RocketCoffee" src="https://github.com/LuskarDev/RocketCoffee/blob/main/assets/rocketcoffe.png" width="720px" />
 </p>
