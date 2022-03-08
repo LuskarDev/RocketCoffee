@@ -325,7 +325,7 @@ body main .titles h2{
         display: flex;
         flex-direction: column;
         background: var(--background);
-        z-index: -1;
+        z-index: -12;
         transform: translateX(0%);
         transition: transform .35s ease;
         opacity: 1;
