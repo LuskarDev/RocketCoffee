@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
     <title>RocketCoffee</title>
 </head>
@@ -56,11 +59,6 @@
 
     <main>
         
-        <div class="lights">
-            <img src="assets/blur-1.png" alt="blur1">
-            <img src="assets/blur-2.png" alt="blur2">
-            <img src="assets/blur-mobile.png" alt="blur mobile">
-        </div>
 
         <div class="text-mobile">
             <h2 class="h2-mobile">
@@ -76,14 +74,20 @@
         </div>
 
         <div class="img-coffee">
-            <img src="assets/rocket-coffee.png" alt="Rocket Coffee">
+            <img src="assets/Cups.svg" alt="Rocket Coffee">
         </div>
 
 
     </main>
 
    
+    <div class="lights">
+        <img src="assets/blur-1.png" alt="blur1">
+        <img src="assets/blur-2.png" alt="blur2">
+        <img src="assets/blur-mobile.png" alt="blur mobile">
+    </div>
 </body>
+
 
 <script src="https://unpkg.com/scrollreveal"></script>
     
@@ -108,21 +112,20 @@
     })
 
     var slideUp = {
-    distance: '150%',
+    distance: '40%',
     origin: 'top',
     opacity: null,
     reset: true
 };
 
 var slideBottom = {
-    distance: '150%',
+    distance: '40%',
     origin: 'bottom',
-    opacity: null,
     reset: true
 };
 
 var slideLeft = {
-    distance: '150%',
+    distance: '40%',
     origin: 'left',
     opacity: null,
     reset: true
@@ -130,7 +133,7 @@ var slideLeft = {
 
 
 var slideRight = {
-    distance: '150%',
+    distance: '40%',
     origin: 'right',
     opacity: null,
     reset: true
@@ -139,10 +142,9 @@ var slideRight = {
 
 
 ScrollReveal().reveal('.nav', slideUp);
-ScrollReveal().reveal('.img-coffee', slideBottom);
+ScrollReveal().reveal('.img-coffee', slideUp);
 ScrollReveal().reveal('.h1', slideLeft);
 ScrollReveal().reveal('.h2', slideRight);
-ScrollReveal().reveal('.h2-mobile', slideUp);
 ScrollReveal().reveal('.btn', slideLeft);
 
 
