@@ -305,6 +305,11 @@ body main .titles h2{
     html {
         overflow-x: hidden;
     }
+
+    body {
+        overflow-x: hidden;
+
+    }
     
 
     body main .titles h1{
