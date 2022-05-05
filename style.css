@@ -24,312 +24,315 @@ body {
     position: relative;
 }
 
-body .lights img:nth-child(1){
-    position: absolute;
-    bottom:0;
-    left: 0px;
-}
-
 body .lights img:nth-child(2){
     position: absolute;
-    top:-50px;
+    top: 0;
     right: 0px;
-    z-index: -02
+    width: 300px;
+    z-index: -2;
 }
 
 body .lights img:nth-child(3){
     display: none;
-    opacity: 0;
-    visibility: hidden;
 }
 
-button {
-    width: 15%;
-    padding: 1rem;
-    font-family: "Manrope",sans-serif;
-    font-weight: 700;
-    background: transparent;
-    color: var(--text-color);
-    border: .1rem solid var(--button);
-    text-transform: uppercase;
-    border-radius: 8px;
+body .lights img:nth-child(1){
+    position: absolute;
+    bottom: -130px;
+    left: 0px;
+    width: 500px;
+    z-index: -2;
 }
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+section header{
+    width: 100%;
+}
+
+section header nav {
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+    margin: 20px 10px 20px 100px;
+}
+
+button{
+    background: transparent;
+    border:1px solid var(--button);
+    border-radius: 8px;
+    padding: 10px 40px;
+    color: white;
+    font-family: "manrope";
+    font-weight: 700;
+}
+
+
 
 button:hover{
     background: var(--button);
-    cursor: pointer;
-    transition: all .34s ease;
+    cursor:pointer;
+    transition: 0.25s ease;
 }
 
-body header .menu-mobile {
+.lista-mobile{
     opacity: 0;
     visibility: hidden;
 }
 
-body header nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 2.5rem;
+section header nav .menu img{
+    display: none;
 }
 
-body header nav ul {
+section header nav ul {
     display: flex;
-   
+    align-items: center
 }
 
-body header nav ul li {
-    font-family: "Manrope";
-    font-weight: 400;
-    font-size: clamp(1rem, 2vh, 1rem);
-    color: var(--text-color);
-    margin: 1rem;
+section header nav ul li{
+    margin: 15px;
     position: relative;
-    cursor: pointer;
 }
 
-body header nav ul li:hover{
-    color: var(--button);
-    font-weight: 700;
-
-}
-
-body header nav ul li::after{
+section header nav ul li::after{
     position: absolute;
     content: " ";
     bottom: 0;
     left: 0;
     width: 0%;
-    border-radius: 80%;
     transition: width .35s ease;
     height: 2px;
     background: var(--button);
 }
 
-body header nav ul li:Hover::after{
+section header nav ul li:Hover::after{
     width: 100%;
 }
 
-body main {
+section header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: "manrope";
+    font-weight: 400;
+}
+
+
+section header nav ul li a:hover{
+    font-weight:700;
+    color: var(--button);
+}
+
+
+section header nav .logo img:nth-child(2){
+    display: none;
+}
+
+
+section header nav .logo img:nth-child(3){
+    display: none;
+}
+
+section main .text-mobile{
+    display: none;
+}
+
+section main .titles {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-family: "Manrope",sans-serif;
+    font-family: "manrope";
+
 }
 
-body main .img-coffee img{
-    width: 100%;
-}
-
-body main .text-mobile {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-}
-
-body main .titles {
-    margin-top: 2rem;
-    text-align: center;
-    color: var(--text-color);
-}
-
-body main .titles h1 {
+section main .titles h1{
+    color: white;
+    font-size: 2.7rem;
     font-weight: 700;
-    text-transform: uppercase;
-    font-size: clamp(4.5rem, 4vh, 2rem);
 }
 
-
-body main .titles h2{
-    font-size: clamp(3.5rem, 4vh, 2rem);
-    text-transform: uppercase;
-    color: var(--background);
+section main .titles h2{
     text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
-} 
+    font-size: 2.7rem;
+    font-weight: 700;
 
-@media (max-width: 740px){
+}
 
+@media (max-width: 796px){
     body .lights img:nth-child(1){
-        opacity: 0;
-        visibility: 0;
-    }
-    
-    body .lights img:nth-child(2){
-        opacity: 0;
-        visibility: 0;
-    }
-    
-    body .lights img:nth-child(3){
         position: absolute;
-        bottom: 0;
+        bottom: -130px;
         left: 0px;
-        width: 100%;
-        display: block;
-        opacity: 1;
-        z-index: -995999;
-        visibility: visible;
+        width: 500px;
+        z-index: -2;
     }
 
-    body main .text-mobile {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        color: var(--text-color);
-        opacity: 1;
-        visibility: visible;
-        margin-top: 4rem;
-    }
-
-    body main .text-mobile h2 {
-        text-align: center;
-        width: 50%;
-        margin-bottom: 2rem;
-    }
-
-
-    body main .text-mobile button {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1;
-    }
-
-    body main .text-mobile button > img {
-        padding-left: 0.5rem;
-    }
-
-    body header .menu-mobile {
-        margin: 2rem 1rem 1rem 1rem;
-        display: flex;
-        opacity: 1;
-        visibility: visible;
-    }
-
-    body header .menu-mobile .logo{
-        position: absolute;
-        top: 10px;
-        left: 70px;
-    }
-
-    body header .menu-mobile #close{
-        opacity: 0;
-        visibility: hidden;
-        transform: translateX(100%);
-    }
-
-
-    body header .menu-mobile #close.showClose{
-        position: absolute;
-        top: 5px;
-        right: 50px;
-        width: 20px;
-        transform: translateX(0%);
-        transition: transform .35s ease;
-        opacity: 1;
-        visibility: visible;
-        cursor: pointer;
-    }
-
-    body header .menu-mobile #close img.showClose{
-        opacity: 1;
-        visibility: visible;
-    }
-
-    body header .menu-mobile .menu img {
-        position: absolute;
-        top: 10px;
-        right: 50px;
-        width: 35px;
-        cursor: pointer;
-        transform: translateX(10%);
-    }
-
-    body header .menu-mobile .menu img.removeMenu{
-        transition: transform .35s ease;
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    body header .menu-mobile .list-mobile{
-        opacity: 0;
-        visibility: hidden;
-        transform: translateX(100%);
-    }
-
-
-    body header .menu-mobile .list-mobile li{
-        border: 1px solid var(--border-menu-mobile);
-        padding: 1rem;
-        margin: 0;
-        color: var(--text-color-menu-mobile);
-        font-weight: 400;
-
-    }
-
-    body header .menu-mobile .list-mobile li:hover{
-        font-family: "Manrope",sans-serif;
-        color: var(--button);
-        font-weight: 700;
-        padding-left: 1.5rem;
-    }
-
-    body header nav ul li:Hover::after{
-        width: 2%;
-        height:100%;
-        border-radius: 0px;
-    }
-
-
-    body header .menu-mobile .list-mobile.ativo{
-        position: fixed;
-        top: 70px;
-        right: 0;
-        width: 42%;
-        display: flex;
-        flex-direction: column;
-        background: var(--background);
-        z-index: 1;
-        transform: translateX(0%);
-        transition: transform .35s ease;
-        opacity: 1;
-        visibility: visible;
-    }
-
-    body header nav {
+    section header nav .logo img:nth-child(1){
         display: none;
     }
 
-@media (max-width: 520px){
-    html {
-        overflow-x: hidden;
+    section header nav .logo img:nth-child(2){
+        display: block;
+    }
+
+    section header nav ul{
+        display: none
+    }
+
+    section header nav button{
+        display: none;
+    }
+
+    section header nav .menu img{
+    display: block;
+    width: 30px;
+    cursor: pointer;
+}
+
+section .img-coffee {
+    margin: 20px;
+}
+
+    section .img-coffee img{ width: 100%;    }
+
+    body .lights img:nth-child(1){
+        position: absolute;
+        bottom: -45px;
+        width: 400px;
+        z-index: -2;
+        display: block;
     }
     
-
-    body main .titles h1{
-        font-size: 2.4rem;
-    }
-
-    body main .titles h2{
-        font-size: 2.4rem;
-
-    }
-
-    body header .menu-mobile .list-mobile.ativo{
-        position: fixed;
-        top: 95px;
-        left: 0;
-        width: 370px;
-        height: 758px;
-        display: flex;
-        flex-direction: column;
-        background: var(--background);
-        z-index: 1222;
-        transform: translateX(0%);
-        transition: transform .35s ease;
-        opacity: 1;
-        visibility: visible;
+    body .lights img:nth-child(2){
+        position: absolute;
+        top: 0;
+        right: 0px;
+        width: 300px;
+        z-index: -2;
+        display: none;
     }
 }
+
+@media (max-width: 656px){
+
+    section header nav{
+        margin: 20px 0;
+    }
+
+    .lista-mobile{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left:0;
+        background: var(--background);
+        height: 100vh;
+        width: 100%;
+        margin:0;
+        display: block;
+        z-index: 0;
+    }
+
+    .lista-mobile.ativo{
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+        transition: transform .25s ease;
+    }
+
+    .lista-mobile #close{
+        cursor:pointer;
+    }
+
+    .lista-mobile .logo-menu{
+        display: flex;
+        align-items: center;
+        margin: 30px;
+        justify-content: space-between;
+    }
+
+    .lista-mobile ul {
+        display: flex;
+        flex-direction: column;   
+    }
+
+    .lista-mobile ul li{
+        width: 100%;
+        padding: 15px;
+        margin: 0;
+        border-top: 1px solid var(--border-menu-mobile);
+        border-bottom: 1px solid var(--border-menu-mobile);
+        font-weight: 400;
+        color: var(--text-color-menu-mobile);
+        position: relative;
+    }
+
+    body .lista-mobile ul li a::after{
+        content: " ";
+        top: 0;
+        left: 0;
+        width: 0;
+    }
+
+    .lista-mobile ul li a:hover::after{
+        position: absolute;
+        width: 2%;
+        height: 100%;
+        background-color: var(--button);
+        transition: all 0.25s ease;
+    }
+
+    .lista-mobile ul li a{
+        font-weight: 400;
+        font-family: "manrope"
+    }
+
+    .lista-mobile ul li a:hover{
+        padding-left: 10px;
+        transition: all .25s ease;
+    }
+
+    button {
+        display: none;
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+    }
+    
+    .btn > img {
+        margin-left: 10px;
+    }
+
+    section main .text-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: white;
+        font-family: "Manrope";
+        padding: 20px
+    }
+
+    section main .text-mobile button{
+        cursor: pointer
+    }
+
+    section main .text-mobile h3{
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    section main .titles {
+        display: block;
+        text-align: center;
+        margin: 15px;
+    }
+
 }
