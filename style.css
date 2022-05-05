@@ -164,12 +164,9 @@ section main .titles h2{
 
 @media (max-width: 796px){
     body .lights img:nth-child(1){
-        position: absolute;
-        bottom: -130px;
-        left: 0px;
-        width: 500px;
-        z-index: -2;
+      display: none;
     }
+
 
     section header nav .logo img:nth-child(1){
         display: none;
@@ -204,7 +201,7 @@ section .img-coffee {
         bottom: -45px;
         width: 400px;
         z-index: -2;
-        display: block;
+        display: none;
     }
     
     body .lights img:nth-child(2){
@@ -326,7 +323,8 @@ section .img-coffee {
     section main .text-mobile h3{
         text-align: center;
         padding: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+        font-size: 1rem;
     }
 
     section main .titles {
@@ -335,4 +333,16 @@ section .img-coffee {
         margin: 15px;
     }
 
+    section main .titles h1,
+    section main .titles h2 {
+        font-size: 2rem;
+    }
+
+
+    body .lights img:nth-child(3){
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        display: block;
+      }
 }
