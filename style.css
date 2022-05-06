@@ -218,7 +218,9 @@ section .img-coffee {
 @media (max-width: 656px){
 
     section {
+        display: flex;
         justify-content: flex-end;
+        align-items: flex-end;
     }
 
     section header nav{
