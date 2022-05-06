@@ -217,6 +217,10 @@ section .img-coffee {
 
 @media (max-width: 656px){
 
+    section {
+        justify-content: flex-end;
+    }
+
     section header nav{
         margin: 20px 0;
     }
@@ -344,7 +348,7 @@ section .img-coffee {
         position: absolute;
         bottom: 0;
         z-index: -1;
-        width: 300px;
+        width: 100%;
         display: block;
       }
 
