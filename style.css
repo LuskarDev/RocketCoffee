@@ -224,7 +224,7 @@ section .img-coffee {
     }
 
     section header nav{
-        margin: 20px 0;
+        margin: 40px 0;
     }
 
     .lista-mobile{
@@ -330,7 +330,7 @@ section .img-coffee {
     section main .text-mobile h3{
         text-align: center;
         padding: 10px;
-        margin-bottom: 5px;
+        margin-bottom: 20px;
         font-size: 1rem;
     }
 
