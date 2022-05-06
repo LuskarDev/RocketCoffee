@@ -343,6 +343,7 @@ section .img-coffee {
     section main .titles h1,
     section main .titles h2 {
         font-size: 2rem;
+        margin-bottom: 2.5rem;
     }
 
 
