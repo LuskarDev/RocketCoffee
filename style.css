@@ -219,7 +219,7 @@ section .img-coffee {
 
     section {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: flex-end;
     }
 
