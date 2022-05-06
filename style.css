@@ -347,4 +347,8 @@ section .img-coffee {
         width: 300px;
         display: block;
       }
+
+      body {
+          overflow-x: hidden;
+      }
 }
