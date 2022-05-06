@@ -1,350 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>RocketCoffee</title>
+</head>
+<body>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    list-style: none;
-}
+    <section>
+        <header>
+            <nav class="nav">
+                    <div class="logo">
+                        <img src="assets/logo-desktop.svg" alt="logo">
+                        <img src="assets/logo-mobile.svg" alt="logo mobile">
+                        <img id="close" src="assets/menu-buguer-close.svg" alt="close">
+                    </div>
+                    <div id="menu" class="menu">
+                        <img src="assets/menu-buguer-open.svg" alt="menu mobile">
+                    </div>
+                <ul >
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Menu</a></li>
+                    <li><a href="">Recompensas</a></li>
+                    <li><a href="">Gift Cards</a></li>
+                    <li><a href="">Lojas</a></li>
+                </ul>
+                <button>Pegar meu Café</button>
+            </nav>
 
-:root {
-    --background: #000;
-    --text-color: #FFF;
-    --button: #8257E5;
-    --border: #29292E;
-    --border-menu-mobile: #A8A8B3;
-    --text-color-menu-mobile: #E1E1E6;
-}
+        <nav class="lista-mobile">
+                <div class="logo-menu">
+                    <div class="logo-mobile">
+                        <img src="assets/logo-mobile.svg" alt="logo mobile">
+                    </div>
+                    <div onclick="removemenu()"  id="close"  class="close">
+                        <img src="assets/menu-buguer-close.svg" alt="close">
+                    </div>
+                </div>
+            <ul >
+                <li><a href="">Home</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">Recompensas</a></li>
+                <li><a href="">Gift Cards</a></li>
+                <li><a href="">Lojas</a></li>
+            </ul>            
+        </nav>
+        </header>
 
-html {
-    overflow-x: hidden;
-}
+        <main>
+            <div class="text-mobile">
+                <h3>
+                    O café que fará seu código decolar para o próximo nivel.
+                </h3>
+        
+                <button class="btn">Pegar meu Café <img src="assets/arrow.svg" alt="arrow"></button>
+            </div>
+            <div class="titles">
+                <h1 class="h1">Great Coffee</h1>
+                <h2  class="h2"> &lt; Great Coffee /&gt; </h2>
+            </div>
+            
+        </main>
 
-body {
-    background: var(--background);
-    position: relative;
-}
+        <div class="img-coffee">
+            <img src="assets/Cups.svg" alt="Rocket Coffee">
+        </div>
+    </section>
 
-body .lights img:nth-child(2){
-    position: absolute;
-    top: 0;
-    right: 0px;
-    width: 300px;
-    z-index: -2;
-}
-
-body .lights img:nth-child(3){
-    display: none;
-}
-
-body .lights img:nth-child(1){
-    position: absolute;
-    bottom: 0;
-    left: 0px;
-    width: 500px;
-    z-index: -2;
-}
-
-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-}
-
-section header{
-    width: 100%;
-    height: 89px;
-}
-
-section header nav {
-    display: flex;
-    align-items:center;
-    justify-content:space-around;
-    margin: 20px 10px 0px 100px;
-}
-
-button{
-    background: transparent;
-    border:1px solid var(--button);
-    border-radius: 8px;
-    padding: 10px 40px;
-    color: white;
-    font-family: "manrope";
-    font-weight: 700;
-}
-
-
-
-button:hover{
-    background: var(--button);
-    cursor:pointer;
-    transition: 0.25s ease;
-}
-
-.lista-mobile{
-    opacity: 0;
-    visibility: hidden;
-}
-
-section header nav .menu img{
-    display: none;
-}
-
-section header nav ul {
-    display: flex;
-    align-items: center
-}
-
-section header nav ul li{
-    margin: 15px;
-    position: relative;
-}
-
-section header nav ul li::after{
-    position: absolute;
-    content: " ";
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    transition: width .35s ease;
-    height: 2px;
-    background: var(--button);
-}
-
-section header nav ul li:Hover::after{
-    width: 100%;
-}
-
-section header nav ul li a{
-    text-decoration: none;
-    color: white;
-    font-family: "manrope";
-    font-weight: 400;
-}
+    <div class="lights">
+        <img src="assets/blur-1.png" alt="blur1">
+        <img src="assets/blur-2.png" alt="blur2">
+        <img src="assets/blur-mobile.png" alt="blur mobile">
+    </div>
+</body>
 
 
-section header nav ul li a:hover{
-    font-weight:700;
-    color: var(--button);
-}
-
-
-section header nav .logo img:nth-child(2){
-    display: none;
-}
-
-
-section header nav .logo img:nth-child(3){
-    display: none;
-}
-
-section main .text-mobile{
-    display: none;
-}
-
-section main .titles {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "manrope";
-
-}
-
-section main .titles h1{
-    color: white;
-    font-size: 2.7rem;
-    font-weight: 700;
-}
-
-section main .titles h2{
-    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
-    font-size: 2.7rem;
-    font-weight: 700;
-
-}
-
-@media (max-width: 796px){
-    body .lights img:nth-child(1){
-      display: none;
-    }
-
-
-    section header nav .logo img:nth-child(1){
-        display: none;
-    }
-
-    section header nav .logo img:nth-child(2){
-        display: block;
-    }
-
-    section header nav ul{
-        display: none
-    }
-
-    section header nav button{
-        display: none;
-    }
-
-    section header nav .menu img{
-    display: block;
-    width: 30px;
-    cursor: pointer;
-}
-
-section .img-coffee {
-    margin: 20px;
-}
-
-    section .img-coffee img{ width: 100%;    }
-
-    body .lights img:nth-child(1){
-        position: absolute;
-        bottom: -45px;
-        width: 400px;
-        z-index: -2;
-        display: none;
-    }
+<script src="https://unpkg.com/scrollreveal"></script>
     
-    body .lights img:nth-child(2){
-        position: absolute;
-        top: 0;
-        right: 0px;
-        width: 300px;
-        z-index: -2;
-        display: none;
-    }
-}
+<script>
 
-@media (max-width: 656px){
+    const menu = document.getElementById("menu");
 
-    section header nav{
-        margin: 20px 0;
-    }
+    const close = document.getElementById("close");
 
-    .lista-mobile{
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
-        top: 0;
-        left:0;
-        background: var(--background);
-        height: 100vh;
-        width: 100%;
-        margin:0;
-        display: block;
-        z-index: 0;
-    }
+    var MenuMobile = document.querySelector(".lista-mobile");
 
-    .lista-mobile.ativo{
-        opacity: 1;
-        visibility: visible;
-        z-index: 1;
-        transition: transform .25s ease;
-    }
-
-    .lista-mobile #close{
-        cursor:pointer;
-    }
-
-    .lista-mobile .logo-menu{
-        display: flex;
-        align-items: center;
-        margin: 30px;
-        justify-content: space-between;
-    }
-
-    .lista-mobile ul {
-        display: flex;
-        flex-direction: column;   
-    }
-
-    .lista-mobile ul li{
-        width: 100%;
-        padding: 15px;
-        margin: 0;
-        border-top: 1px solid var(--border-menu-mobile);
-        border-bottom: 1px solid var(--border-menu-mobile);
-        font-weight: 400;
-        color: var(--text-color-menu-mobile);
-        position: relative;
-    }
-
-    body .lista-mobile ul li a::after{
-        content: " ";
-        top: 0;
-        left: 0;
-        width: 0;
-    }
-
-    .lista-mobile ul li a:hover::after{
-        position: absolute;
-        width: 2%;
-        height: 100%;
-        background-color: var(--button);
-        transition: all 0.25s ease;
-    }
-
-    .lista-mobile ul li a{
-        font-weight: 400;
-        font-family: "manrope"
-    }
-
-    .lista-mobile ul li a:hover{
-        padding-left: 10px;
-        transition: all .25s ease;
-    }
-
-    button {
-        display: none;
-    }
-
-    .btn {
-        display: flex;
-        align-items: center;
-    }
+    menu.addEventListener("click",() => {
+        MenuMobile.classList.add('ativo');
+        MenuMobile.style.transform = "translateX(0%)";
+    })
     
-    .btn > img {
-        margin-left: 10px;
-    }
 
-    section main .text-mobile{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        color: white;
-        font-family: "Manrope";
-        padding: 20px
-    }
+    function removemenu(){
+        MenuMobile.classList.add("ativo");
+        MenuMobile.style.transform = "translateX(100%)";
 
-    section main .text-mobile button{
-        cursor: pointer
-    }
-
-    section main .text-mobile h3{
-        text-align: center;
-        padding: 10px;
-        margin-bottom: 5px;
-        font-size: 1rem;
-    }
-
-    section main .titles {
-        display: block;
-        text-align: center;
-        margin: 15px;
-    }
-
-    section main .titles h1,
-    section main .titles h2 {
-        font-size: 2rem;
     }
 
 
-    body .lights img:nth-child(3){
-        position: absolute;
-        bottom: 0;
-        z-index: -1;
-        width: 500px;
-        display: block;
-      }
-}
+
+    var slideUp = {
+    distance: '40%',
+    origin: 'top',
+    opacity: null,
+    reset: true
+};
+
+var slideBottom = {
+    distance: '40%',
+    origin: 'bottom',
+    reset: true
+};
+
+var slideLeft = {
+    distance: '40%',
+    origin: 'left',
+    opacity: null,
+    reset: true
+};
+
+
+var slideRight = {
+    distance: '40%',
+    origin: 'right',
+    opacity: null,
+    reset: true
+};
+
+
+
+ScrollReveal().reveal('.nav', slideUp);
+ScrollReveal().reveal('.img-coffee', slideUp);
+ScrollReveal().reveal('.h1', slideLeft);
+ScrollReveal().reveal('.h2', slideRight);
+ScrollReveal().reveal('.btn', slideLeft);
+
+
+
+
+
+
+
+
+</script>
+
+</html>
