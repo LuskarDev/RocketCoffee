@@ -45,22 +45,31 @@ body .lights img:nth-child(1){
 }
 
 section {
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items:center;
 }
 
+section .img-coffee {
+    position: absolute;
+    bottom: 0;
+}
+
 section header{
     width: 100%;
-    height: 89px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 section header nav {
+    width: 100%;
     display: flex;
     align-items:center;
     justify-content:space-around;
-    margin: 20px 10px 0px 100px;
+    margin: 20px 0;
 }
 
 button{
@@ -82,9 +91,12 @@ button:hover{
 }
 
 .lista-mobile{
+    display: none;
     opacity: 0;
     visibility: hidden;
 }
+
+
 
 section header nav .menu img{
     display: none;
@@ -168,6 +180,8 @@ section main .titles h2{
       display: none;
     }
 
+    
+
 
     section header nav .logo img:nth-child(1){
         display: none;
@@ -176,6 +190,9 @@ section main .titles h2{
     section header nav .logo img:nth-child(2){
         display: block;
     }
+
+section header nav{margin: 20px 0; width: 500px; }
+
 
     section header nav ul{
         display: none
@@ -191,9 +208,80 @@ section main .titles h2{
     cursor: pointer;
 }
 
-section .img-coffee {
-    margin: 20px;
+.lista-mobile{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left:0;
+    background: var(--background);
+    height: 100vh;
+    width: 100%;
+    margin:0;
+    display: block;
+    z-index: 0;
 }
+
+.lista-mobile.ativo{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+    transition: transform .25s ease;
+}
+
+.lista-mobile #close{
+    cursor:pointer;
+}
+
+.lista-mobile .logo-menu{
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    justify-content: space-between;
+}
+
+.lista-mobile ul {
+    display: flex;
+    flex-direction: column;   
+}
+
+.lista-mobile ul li{
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+    border-top: 1px solid var(--border-menu-mobile);
+    border-bottom: 1px solid var(--border-menu-mobile);
+    font-weight: 400;
+    color: var(--text-color-menu-mobile);
+    position: relative;
+}
+
+body .lista-mobile ul li a::after{
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 0;
+}
+
+.lista-mobile ul li a:hover::after{
+    position: absolute;
+    width: 2%;
+    height: 100%;
+    background-color: var(--button);
+    transition: all 0.25s ease;
+}
+
+.lista-mobile ul li a{
+    font-weight: 400;
+    font-family: "manrope"
+}
+
+.lista-mobile ul li a:hover{
+    padding-left: 10px;
+    transition: all .25s ease;
+}
+
 
     section .img-coffee img{ width: 100%;    }
 
@@ -219,13 +307,11 @@ section .img-coffee {
 
     section {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
     }
 
-    section header nav{
-        margin: 0;
-    }
+    section header nav{margin: 20px 0; width: 400px; }
 
     .lista-mobile{
         opacity: 0;
@@ -242,6 +328,7 @@ section .img-coffee {
     }
 
     .lista-mobile.ativo{
+        display: block;
         opacity: 1;
         visibility: visible;
         z-index: 1;
@@ -343,7 +430,7 @@ section .img-coffee {
     section main .titles h1,
     section main .titles h2 {
         font-size: 2rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 1rem;
     }
 
 
@@ -352,6 +439,7 @@ section .img-coffee {
         bottom: 0;
         z-index: -1;
         width: 100%;
+        height: 70px;
         display: block;
       }
 
