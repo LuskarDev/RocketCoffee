@@ -311,6 +311,10 @@ body .lista-mobile ul li a::after{
         align-items: center;
     }
 
+    section header {
+        padding: 20px 0;
+    }
+
     section header nav{margin: 20px 0; width: 400px; }
 
     .lista-mobile{
